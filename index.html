@@ -1,0 +1,526 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PSG STORE</title>
+    <!-- ICONO PAGINA WEB -->
+    <link rel="shortcut icon" href="images/iconoPsg.ico">
+    <!-- REFERENCIA ESTILOS -->
+    <link rel="stylesheet" href="style/registroStyle.css">
+    <link rel="stylesheet" href="style/indexStyle.css">
+    <link rel="stylesheet" href="bootStrap/css/bootstrap.css">
+    <script src="bootStrap/js/bootstrap.js"></script>
+    <script src="javaScript/code.js"></script>
+    <script src="javaScript/codecarrito.js"></script>
+</head>
+
+<body onload="primeraFuncion()">
+
+    <!-- CONTACTANOS EN WHATSAPP -->
+    <a id="contactoWSP" href="https://api.whatsapp.com/send?phone=51952401130" target="_blank">
+        <img src="images/whatsapp.png">
+    </a>
+
+    <!-- COOKIES ACEPTAR 
+
+    <div id="aceptarCookie">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident inventore tempora, qui eveniet eius
+            voluptas laudantium. Tempora dolores ex animi, excepturi provident ducimus! Sint, doloribus. Et veritatis
+            labore vitae mollitia.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">ACEPTAR</button>
+    </div>-->
+
+    <div id="aceptarCookie" style="border:1px solid black;">
+        <p>Usamos cookies para ayudar a mejorar nuestros servicios, hacer ofertas personales y mejorar su experiencia. Si no acepta las cookies opcionales a continuación, su experiencia puede verse afectada. Si quieres saber más, por favor lee <a href="/pages/cookies.html">elCookie Policy</a></p>
+        <button onclick="myFunctionCookie()">Aceptar</button>
+    </div>
+
+    <!-- CABEZERA DE PAGINA -->
+    <div id="cabecera">
+        <div id="cabecera-option">
+            <ul>
+                <a href="index.html">
+                    <li>Pagina Principal</li>
+                </a>
+                <a href="pages/registro.html">
+                    <li>Registrate</li>
+                </a>
+                <a href="https://billetterie.psg.fr/en/?utm_source=store.psg.fr&utm_medium=referral&utm_campaign=Store_PSG"
+                    target="_blank">
+                    <li>Entradas</li>
+                </a>
+                <a href="https://es.experience.psg.fr/?utm_source=Store&utm_medium=Store_header&utm_campaign=Store_header_StadiumTour"
+                    target="_blank">
+                    <li>Stadium Tour</li>
+                </a>
+                <a href="https://store3.psg.fr/track-order" target="_blank">
+                    <li>Localizador de envíos</li>
+                </a>
+                <a href="https://store3.psg.fr/customer-help-desk" target="_blank">
+                    <li>Ayuda</li>
+                </a>
+                <a href="https://login.psg.fr/17900b24-9824-4148-b1a1-ccfdbaae0d0d/auth-ui/login?__aic_csrf=8iApHK5oy0-Y6-9h&backUrl=https%3A%2F%2Fstore3.psg.fr%2F&client_id=8ef93ea2-408f-4463-8f12-0aaca856be4c&nonce=h1LZ1Z53Is9WoUPrxxKQaA%3D%3D&prompt=login&redirect_uri=https%3A%2F%2Fstore3.psg.fr%2Fapi%2Faccount%2Foauth%2Foidcreturn&response_mode=form_post&response_type=code&scope=openid+profile+email+address+phone&state=eyJzZXNzaW9uSWQiOiJiNzE4YzNmMC1hMjhmLTExZWQtOTJhMi00NTRlMzlhYWI4MWUiLCJuZXh0UGF0aG5hbWUiOiIvIiwiYmFja1VybCI6Imh0dHBzOi8vc3RvcmUzLnBzZy5mci8ifQ%3D%3D&ui_locales=es-ES"
+                    target="_blank">
+                    <li>Mi cuenta</li>
+                </a>
+            </ul>
+        </div>
+        <!-- BUSCADOR Y LOGO DE PAGINA -->
+        <div id="buscador">
+            <div>
+                <a href="index.html">
+                    <img src="images/logoPsg.png" alt="">
+                </a>
+            </div>
+            <div>
+                <form id="formBuscador">
+                    <input type="text" placeholder="Buscar">
+                    <button formaction="../index.html">Buscar</button>
+                </form>
+            </div>
+
+            <button onclick="actualizarLista()" href="#" data-bs-toggle="modal" data-bs-target="#carritoCompra">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart4"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal PROMOCION-->
+    <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <h3>DESCUENTO DE SEMANA DE CHAMPIONS LEAGUE</h3>
+                    <img src="images/imageDescuento.png" alt="" width="100%">
+                    <p>Descuento en todos los productos de la tienda. Promocion valida desde 12/02/2023 hasta 19/02/2023
+                        y/o hasta agotar estock. Aplican terminos y condiciones</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CARRITO -->
+    <div class="modal fade" id="carritoCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="listaCarrito">
+                    nuestros carritos
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU DE OPCIONES DE COMPRA -->
+    <div id="menuPrincipal">
+        <ul>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-jordan-brand/t-25861493+br-351287+z-9423-475346623">
+                <li>JORDAN</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-football-kits/t-92646982+d-565009383+z-7-3911137895">
+                <li>EQUIPACIONES</li>
+            </a>
+            <a href="https://store3.psg.fr/es/#top-nav4">
+                <li>COMPRAR POR JUGADOR</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-men/t-25643682+ga-89+z-905835-176479248">
+                <li>HOMBRE</li>
+            </a>
+            <a href="https://store3.psg.fr/en/paris-saint-germain-women/t-14318148+ga-02+z-930202-303312072">
+                <li>MUJER</li>
+            </a>
+            <a href="https://store3.psg.fr/en/paris-saint-germain-kids/t-47198137+ga-25+z-916303-2807001426">
+                <li>NIÑO</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-retro/t-14420304+d-1250322908+z-93-1486497686">
+                <li>RETRO</li>
+            </a>
+            <a href="https://store3.psg.fr/es/#top-nav10">
+                <li>REGALOS Y ACCESORIOS</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- CONTENEDOR PRODUCTO POR JUGADOR -->
+    <!--
+    <div id="productoJugador">
+        <h2>Tienda por jugador</h2>
+        <ol>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-lionel-messi/t-14209260+a-27058074+z-906-958790968"
+                    target="_blank">Messi</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-kylian-mbappe/t-36200371+a-6735576413+z-99-3381033309"
+                    target="_blank">Mbappe</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-neymar-jr/t-25313604+a-06500113+z-985-1638497552"
+                    target="_blank">Neymar JR</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-marco-verratti/t-58204726+a-5657120517+z-8-3921671075"
+                    target="_blank">Verratti</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-sergio-ramos/t-92644737+a-09817375+z-84-3945308033"
+                    target="_blank">Sergio Ramos</a></li>
+        </ol>
+    </div>-->
+
+    <!-- CONTENEDOR DE PRODUCTOS -->
+    <div id="contenedorProducto">
+
+        <!-- SUBTITULO PRODUCTO -->
+        <h2>Nuestro principales productos</h2>
+        <!-- TABLA DE PRODUCTOS -->
+        <table id="tablaProducto">
+            <tr>
+                <td>
+                    <div class="producto">
+                        <!-- TITULO PRODUCTO -->
+                        <h3 class="tituloProducto">Camiseta Neymar PSG 2023-24</h3>
+                        <!-- IMAGEN PRODUCTO -->
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-kit-2022-23-little-kids-with-neymar-jr-10-printing_ss4_p-13328499+u-frpvym3dy09j07mqmv4w+v-000979d5a94549a08793ddf14832dda1.jpg?_hv=2&w=900">
+                        <br>
+                        <!-- REDIRECCION A CARRO DE COMPRAS -->
+                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                        <!-- PRECIO ANTES PRODUCTO -->
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 180.00</s></h5>
+                        <!-- PRECIO ACTUAL PRODUCTO -->
+                        <h4 class="precioProducto">US$ 106.00</h4>
+                        <!-- DETALLES Y DISPONIBILIDAD ENVIO PRODUCTO -->
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Camiseta de la 4ª equipación del PSG 2023-24</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-vapor-match-shirt-2022-23_ss4_p-13354747+u-kch3skjvkc14lp9ynm8n+v-47ff7de2b492486c9314137625acd7ff.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 250.00</s></h5>
+                        <h4 class="precioProducto">US$ 173.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Camiseta previa al partido del PSG - Amarillo</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-pre-match-top-yellow_ss4_p-13354712+u-1c8licyn4jefofakp9i0+v-8fffc3628cd34843b2ff9202e091fad8.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 250.00</s></h5>
+                        <h4 class="precioProducto">US$ 83.00</h4>
+                        <ul>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Pantalón corto Strike del PSG - Negro</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-strike-shorts-black_ss4_p-13354640+u-ex2pnxxkwxp1teubf63s+v-a32bb32694e0485380270e46a02052ed.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-x-jordan-strike-shorts-black/p-2381580559289344+z-982-2629316862?_ref=p-GALP:m-GRID:i-r1c0:po-3"
+                            target="_blank">Agregar al Carro</a>
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 80.00</s></h5>
+                        <h4 class="precioProducto">US$ 50.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Camiseta Stadium de la 1ª equipación del PSG 2022-23</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-shirt-2022-23_ss4_p-13303204+u-sk3ly93bp2lofzgo6aqu+v-48adda5890534d37b6f42475f8d16147.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-home-stadium-shirt-2022-23/p-2314032236464415+z-918-191791319?_ref=p-GALP:m-GRID:i-r10c1:po-31"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">Precio: US$ 113.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Funda para iPhone 12 PSG Messi SolidSuit</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-solidsuit-iphone-12-case_ss4_p-12097882+u-lg4sl01oauvdua8gah63+v-001ddc724dbb464885f058c27c0541a6.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-messi-solidsuit-iphone-12-case/p-3491333285756479+z-992-2877348107?_ref=p-ALP:m-GRID:i-r8c1:po-25"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 47.60</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Gorra Core con el escudo del Paris Saint-Germain hombre</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-essential-crest-cap-blue-mens_ss4_p-12033356+u-if8m1uqgisih578cuzz2+v-344992ef151540c9a1b36905bf6d35fc.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-essential-crest-cap-blue-mens/p-2380339269258340+z-926-710285134?_ref=p-DLP:m-GRID:i-r0c0:po-0"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 20.44</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Paris Saint-Germain Marco Verratti Soccerstarz</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-marco-verratti-soccerstarz_ss4_p-12097903+u-4v2jr58cwjdb2cp5ml1f+v-7daf7a4b922e4fe387fc547479281393.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-marco-verratti-soccerstarz/p-4546009874761103+z-82-1270272902?_ref=p-DLP:m-GRID:i-r0c2:po-2"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 9.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Balón de Strike del PSG - en talla 5</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-strike-ball-size-5_ss4_p-13303158+u-z7wxgruqw23fbu3sgdut+v-10be11725a35417f9b1cdea43c290e46.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-strike-ball-size-5/p-4558364436901619+z-84-3865738269?_ref=p-SRP:m-GRID:i-r0c0:po-0"
+                            target="_blank">Agregar al Carro</a>
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 62.00</s></h5>
+                        <h4 class="precioProducto">US$ 42.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Taza del jugador del PSG - 11oz - Neymar JR</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-player-mug-11oz-neymar-jr_ss4_p-12087770+u-sc20du37c9hw7ogzpbtp+v-73ecaa538280447ebe7e4386b81b342a.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-player-mug-11oz-neymar-jr/p-4502338630749699+z-980-3027594574?_ref=p-SRP:m-GRID:i-r5c2:po-17"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 15.00</h4>
+                        <ul>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">PSG x Jordan Air 200E - Negro</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-air-200e-black_ss4_p-13354725+u-1app5c5pq7bnhms3volm+v-aaf68612342f49ce9715ccbddeb852e1.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-x-jordan-air-200e-black/p-3470475059303550+z-910-134392255?_ref=p-DLP:m-GRID:i-r0c1:po-1"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 195.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Sudadera PSG x Jordan - Gris</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-hoodie-grey_ss4_p-13354671+u-gan7uxfh6a8jazj46uh4+v-b0f7ccf32e074afc96120cf5745e195a.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-x-jordan-hoodie-grey/p-2314479426404189+z-915-2299216790?_ref=p-SRP:m-GRID:i-r7c1:po-22"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 113.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Medias de la 4ª equipación del PSG 2023-24</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-stadium-socks-2022-23_ss4_p-13354711+u-9nsexgvs6gaiwnd0d5c+v-1962eba1da1345129c6527b4fde6a56c.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-x-jordan-fourth-stadium-socks-2022-23/p-3414257248180112+z-975-1420886113?_ref=p-DLP:m-GRID:i-r15c0:po-45"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 26.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Camiseta de la 1ª equipación del PSG 93/94</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-1993/94-home-shirt_ss4_p-13301593+u-191dhb6klw8xetyl6a7f+v-39f1c3a2948a46818c27637b49703983.jpg?_hv=2&w=900">
+                        <br>
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-1993/94-home-shirt/p-3492701167384392+z-925-3442021982?_ref=p-DLP:m-GRID:i-r0c0:po-0"
+                            target="_blank">Agregar al Carro</a>
+                        <h5 class="precioAntesProducto"><s>Antes: US$ 90.00</s></h5>
+                        <h4 class="precioProducto">US$ 60.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Bufanda PSG Messi - Azul marino - Hombre</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-scarf-navy-mens_ss4_p-12087746+u-ij4s4xv3jyg0kep6qrpl+v-c39c0db4529d4b0daba46582202e8214.jpg?_hv=2&w=900">
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-messi-scarf-navy-mens/p-3457885307414851+z-947-768080797?_ref=p-SRP:m-GRID:i-r0c1:po-1"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 8.05</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="producto">
+                        <h3 class="tituloProducto">Medias Stadium de la 1ª equipación del PSG 2022-23</h3>
+                        <img class="fotoProducto"
+                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-socks-2022-23_ss4_p-13303160+u-h5mut527llblto2cv3yp+v-ae3b569a85644618af88c85caae94455.jpg?_hv=2&w=900">
+                        <a class="agregarCarro"
+                            href="https://store3.psg.fr/es/paris-saint-germain-home-stadium-socks-2022-23/p-3414031158231766+z-911-814313606?_ref=p-SFLP:m-GRID:i-r6c0:po-18"
+                            target="_blank">Agregar al Carro</a>
+                        <h4 class="precioProducto">US$ 26.00</h4>
+                        <ul>
+                            <li>Despacho a domicilio</li>
+                            <li>Retiro en tienda</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- INFORMACION DE TIENDA -->
+    <div id="acercaTienda">
+        <p>La tienda en línea oficial del Paris Saint-Germain enumera todos los artículos oficiales desarrollados
+            para los fanáticos del Club Parisien. Ya sea que esté buscando equipaciones auténticas del Paris
+            Saint-Germain para toda la familia o recuerdos para su colección de fans, aquí encontrará exactamente lo
+            que busca.
+
+            <br>Compre su Camisetas 2021/22 del Paris Saint-Germain , así como equipaciones de tercero, cuarto y
+            portero para hombres, mujeres y niños. El gran jugador Lionel Messi se ha unido oficialmente al PSG, y
+            tenemos todos los estilos de uniformes de Lionel Messi Paris Saint-Germain para elegir. Llevará el
+            número 30 para París, y puedes encontrar las camisetas de Messi Paris aquí en la tienda del PSG. Apoya a
+            tus jugadores favoritos con las camisetas de Neymar Jr y Kylian Mbappé, o personaliza una camiseta con
+            tu propio nombre y número para tu próxima salida al estadio. ¡Entrena como los profesionales con el
+            equipo de entrenamiento Nike, las zapatillas y todo nuestro equipo de fútbol! Mientras esté aquí, no se
+            olvide de recoger algunos accesorios oficiales Paris Saint-Germain para su hogar u oficina, disponible
+            exclusivamente en la tienda online PSG.
+
+            <br>El oficial de Paris Saint-Germain El equipo de servicio al cliente de la tienda en línea está
+            dedicado a brindarle, como fan, la mejor experiencia. Para obtener respuestas a preguntas frecuentes o
+            para obtener servicio al cliente, consulte nuestro menú fácil de usar para realizar compras sin
+            preocupaciones.
+        </p>
+        <img src="https://store3.psg.fr/content/ws/all/963d6613-363e-43e3-8f7a-6f752ae7f5c5__1600X287.png" alt="">
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <div id="footer">
+        <!-- ATENCION AL CLIENTES -->
+        <div id="atencionCliente">
+            <h5>Atención al cliente</h5>
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=51952401130" target="_blank">Atención por Whatsapp</a>
+                </li>
+                <li><a href="https://store3.psg.fr/customer-help-desk" target="_blank">Ayuda</a></li>
+                <li><a href="https://store3.psg.fr/es/tracking-information/ch-1368" target="_blank">Localizador de
+                        envíos</a></li>
+                <li><a href="https://store3.psg.fr/es/sizing-guidelines/ch-1365" target="_blank">Guía de tallas</a>
+                </li>
+                <li><a href="https://google.com.pe" target="_blank">Libro de reclamaciones</a></li>
+            </ul>
+        </div>
+        <!-- REDES SOCIALES DE PAGINA -->
+        <div id="redesSociales">
+            <h5>Nuestras Redes Sociales</h5>
+            <ul>
+                <li><a href="https://www.facebook.com/PSG/" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/PSG_inside" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/psg/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/user/PSGofficiel" target="_blank">Youtube</a></li>
+                <li><a href="https://www.tiktok.com/@psg" target="_blank">TikTok</a></li>
+                <li><a href="https://www.snapchat.com/add/psg" target="_blank">Snapchat</a></li>
+                <li><a href="https://www.twitch.tv/psg?lang=es" target="_blank">Twitch</a></li>
+            </ul>
+        </div>
+        <!-- REGISTRO EN FOOTER -->
+        <div id="footerRegistro">
+            <p>Mantente informado acerca de ofertas, nuevos productos y más</p>
+            <button><a href="pages/registro.html">REGÍSTRATE Y AHORRA UN 10%</a></button>
+        </div>
+    </div>
+    <!-- DERECHOS PAGINA -->
+    <div id="derechos">
+        <p>Copyright © Design by URBANO | 2023</p>
+    </div>
+
+    <!-- Modal PROMOCION-->
+    <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <p>pipipipip</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

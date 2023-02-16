@@ -1,0 +1,84 @@
+/*ESTILOS DE FORMULARIO*/
+
+#contentRegistro {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#contentRegistro div {
+    padding-bottom: 25px;
+}
+
+#contentRegistro div h1 {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#formularioRegistro {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#registroForm {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    align-items: center;
+}
+
+#registroForm label,input {
+    width: 50%;
+}
+
+#registroForm label {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 19px;
+}
+
+#registroForm input {
+    height: 40px;
+    border: 0;
+    outline: none;
+    border-bottom: 3px #808080 solid;
+    font-size: 19px;
+    color: #414040;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#registroForm input::placeholder {
+    font-size: 19px;
+}
+
+#registroForm input:hover{
+    background:#e8e7e7;
+}
+
+#registroForm button{
+    margin-top: 50px;
+    height: 50px;
+    width: 100px;
+    font-size: 19px;
+    background-color: black;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#registroForm button:hover{
+    font-size: 20px;
+}
+
+#contentRegistro a{
+    font-size: 19px;
+    color: #808080;
+    text-decoration: none;
+}
+
+#contentRegistro a:hover{
+    color: #000000;
+    text-decoration: underline;
+}

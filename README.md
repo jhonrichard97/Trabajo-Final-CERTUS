@@ -1,2 +1,4 @@
-# Trabajo-Final-CERTUS
-Carrito de compras del curso DESARROLLO-WEB
+# Trabajo-parcial-CERTUS
+Trabajo parcial 1 CERTUS
+
+Alumno: Jhon Richard Urbano Amiquero

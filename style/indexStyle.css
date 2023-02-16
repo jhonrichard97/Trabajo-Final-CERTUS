@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    font-family: "Open Sans",sans-serif;
+}
+
+#contactoWSP{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    z-index: 100;
+}
+
+#contactoWSP img{
+    opacity: 0.7;
+    width: 80px;
+}
+
+#contactoWSP img:hover{
+    opacity: 1;
+    width: 90px;
+}
+
+/*ESTILO CONTENEDOR ACEPTAR COOKIES*/
+#aceptarCookie{
+    position: fixed;
+    background-color: #004170;
+    width: 100%;
+    bottom: 0;
+    z-index: 50;
+    height: 150px;
+}
+#aceptarCookie p{
+    margin: 20px 30px 10px;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+#aceptarCookie button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+#aceptarCookie button:hover{
+    opacity: 0.9;
+}
+
+/*ESTILO DE MENU DE NAVEGACION*/
+
+#cabecera-option ul {
+    background-color: #000000;
+    padding: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#cabecera-option ul li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+#cabecera-option ul li:hover {
+    text-decoration: underline;
+}
+
+/*ESTILO DE LOGO Y BUSCADOR DE PAGINA*/
+
+#buscador {
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#buscador img {
+    height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#formBuscador input {
+    width: 600px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px #808080 solid;
+    padding-left: 10px;
+}
+
+#formBuscador button {
+    width: 80px;
+    height: 40px;
+    margin-right: 200px;
+}
+
+/*ESTILO MENU PRINCIPAL*/
+
+#menuPrincipal{
+    background-color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#menuPrincipal ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+#menuPrincipal ul a{
+    padding: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+#menuPrincipal ul a:hover{
+    opacity: 1;
+}
+
+#menuPrincipal ul li{
+    list-style-type: none;
+}
+
+/*ESTILO TABLA*/
+
+#contenedorProducto{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+#contenedorProducto h2{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.producto{
+    display: block;
+    align-items: center;
+    height: 520px;
+    width: 392px;
+}
+
+.tituloProducto{
+    margin-top: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.fotoProducto{
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.agregarCarro{
+    margin-left: 15px;
+    padding: 8px;
+    border: 1px #000000 solid;
+    border-radius: 6    px;
+}
+
+.precioAntesProducto{
+    font-size: 15px;
+    color: #000000;
+    opacity: 0.6;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.precioProducto{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.producto a{
+    margin-top: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.producto a:hover{
+    opacity: 0.4;
+}
+
+/*ESTILO ACERTA TIENDA*/
+
+#acercaTienda{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#acercaTienda img{
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*PIE DE PAGINA*/
+
+#footer{
+    background-color: #f4f5f5;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#footer div{
+    margin: 20px;
+}
+
+#footer div h5{
+    margin-bottom: 10px;
+    font-size: 100%;
+}
+
+#footer div ul li{
+    list-style-type: none;
+}
+
+#footer div ul a,p{
+    font-size: 90%;
+    text-decoration: none;
+    color: #000;
+}
+
+#footer div ul a:hover{
+    text-decoration: underline;
+}
+
+#footerRegistro button{
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#footerRegistro button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 20px 20px 20px 30px;
+}
+
+#derechos{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}

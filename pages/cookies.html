@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PSG STORE</title>
+    <!-- ICONO PAGINA WEB -->
+    <link rel="shortcut icon" href="../images/iconoPsg.ico">
+    <!-- REFERENCIA ESTILOS -->
+    <link rel="stylesheet" href="../style/registroStyle.css">
+    <link rel="stylesheet" href="../style/indexStyle.css">
+    <link rel="stylesheet" href="../bootStrap/css/bootstrap.css">
+    <script src="../bootStrap/js/bootstrap.js"></script>
+    <script src="../javaScript/code.js"></script>
+</head>
+
+<body onload="primeraFuncion()">
+
+    <!-- CONTACTANOS EN WHATSAPP -->
+    <a id="contactoWSP" href="https://api.whatsapp.com/send?phone=51952401130" target="_blank">
+        <img src="../images/whatsapp.png">
+    </a>
+
+    <!-- COOKIES ACEPTAR 
+
+    <div id="aceptarCookie">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident inventore tempora, qui eveniet eius
+            voluptas laudantium. Tempora dolores ex animi, excepturi provident ducimus! Sint, doloribus. Et veritatis
+            labore vitae mollitia.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">ACEPTAR</button>
+    </div>-->
+
+    <div id="aceptarCookie" style="border:1px solid black;">
+        <p>Usamos cookies para ayudar a mejorar nuestros servicios, hacer ofertas personales y mejorar su experiencia. Si no acepta las cookies opcionales a continuación, su experiencia puede verse afectada. Si quieres saber más, por favor lee <a href="/pages/cookies.html">elCookie Policy</a></p>
+        <button onclick="myFunctionCookie()">Aceptar</button>
+    </div>
+
+    <!-- CABEZERA DE PAGINA -->
+    <div id="cabecera">
+        <div id="cabecera-option">
+            <ul>
+                <a href="../index.html">
+                    <li>Pagina Principal</li>
+                </a>
+                <a href="pages/registro.html">
+                    <li>Registrate</li>
+                </a>
+                <a href="https://billetterie.psg.fr/en/?utm_source=store.psg.fr&utm_medium=referral&utm_campaign=Store_PSG"
+                    target="_blank">
+                    <li>Entradas</li>
+                </a>
+                <a href="https://es.experience.psg.fr/?utm_source=Store&utm_medium=Store_header&utm_campaign=Store_header_StadiumTour"
+                    target="_blank">
+                    <li>Stadium Tour</li>
+                </a>
+                <a href="https://store3.psg.fr/track-order" target="_blank">
+                    <li>Localizador de envíos</li>
+                </a>
+                <a href="https://store3.psg.fr/customer-help-desk" target="_blank">
+                    <li>Ayuda</li>
+                </a>
+                <a href="https://login.psg.fr/17900b24-9824-4148-b1a1-ccfdbaae0d0d/auth-ui/login?__aic_csrf=8iApHK5oy0-Y6-9h&backUrl=https%3A%2F%2Fstore3.psg.fr%2F&client_id=8ef93ea2-408f-4463-8f12-0aaca856be4c&nonce=h1LZ1Z53Is9WoUPrxxKQaA%3D%3D&prompt=login&redirect_uri=https%3A%2F%2Fstore3.psg.fr%2Fapi%2Faccount%2Foauth%2Foidcreturn&response_mode=form_post&response_type=code&scope=openid+profile+email+address+phone&state=eyJzZXNzaW9uSWQiOiJiNzE4YzNmMC1hMjhmLTExZWQtOTJhMi00NTRlMzlhYWI4MWUiLCJuZXh0UGF0aG5hbWUiOiIvIiwiYmFja1VybCI6Imh0dHBzOi8vc3RvcmUzLnBzZy5mci8ifQ%3D%3D&ui_locales=es-ES"
+                    target="_blank">
+                    <li>Mi cuenta</li>
+                </a>
+            </ul>
+        </div>
+        <!-- BUSCADOR Y LOGO DE PAGINA -->
+        <div id="buscador">
+            <div>
+                <a href="index.html">
+                    <img src="images/logoPsg.png" alt="">
+                </a>
+            </div>
+            <div>
+                <form id="formBuscador">
+                    <input type="text" placeholder="Buscar">
+                    <button formaction="../index.html">Buscar</button>
+                </form>
+            </div>
+
+            <button onclick="actualizarLista()" href="#" data-bs-toggle="modal" data-bs-target="#carritoCompra">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart4"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal PROMOCION-->
+    <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <h3>DESCUENTO DE SEMANA DE CHAMPIONS LEAGUE</h3>
+                    <img src="/images/imageDescuento.png" alt="" width="100%">
+                    <p>Descuento en todos los productos de la tienda. Promocion valida desde 12/02/2023 hasta 19/02/2023
+                        y/o hasta agotar estock. Aplican terminos y condiciones</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CARRITO -->
+    <div class="modal fade" id="carritoCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU DE OPCIONES DE COMPRA -->
+    <div id="menuPrincipal">
+        <ul>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-jordan-brand/t-25861493+br-351287+z-9423-475346623">
+                <li>JORDAN</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-football-kits/t-92646982+d-565009383+z-7-3911137895">
+                <li>EQUIPACIONES</li>
+            </a>
+            <a href="https://store3.psg.fr/es/#top-nav4">
+                <li>COMPRAR POR JUGADOR</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-men/t-25643682+ga-89+z-905835-176479248">
+                <li>HOMBRE</li>
+            </a>
+            <a href="https://store3.psg.fr/en/paris-saint-germain-women/t-14318148+ga-02+z-930202-303312072">
+                <li>MUJER</li>
+            </a>
+            <a href="https://store3.psg.fr/en/paris-saint-germain-kids/t-47198137+ga-25+z-916303-2807001426">
+                <li>NIÑO</li>
+            </a>
+            <a href="https://store3.psg.fr/es/paris-saint-germain-retro/t-14420304+d-1250322908+z-93-1486497686">
+                <li>RETRO</li>
+            </a>
+            <a href="https://store3.psg.fr/es/#top-nav10">
+                <li>REGALOS Y ACCESORIOS</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- CONTENEDOR PRODUCTO POR JUGADOR -->
+    <!--
+    <div id="productoJugador">
+        <h2>Tienda por jugador</h2>
+        <ol>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-lionel-messi/t-14209260+a-27058074+z-906-958790968"
+                    target="_blank">Messi</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-kylian-mbappe/t-36200371+a-6735576413+z-99-3381033309"
+                    target="_blank">Mbappe</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-neymar-jr/t-25313604+a-06500113+z-985-1638497552"
+                    target="_blank">Neymar JR</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-marco-verratti/t-58204726+a-5657120517+z-8-3921671075"
+                    target="_blank">Verratti</a></li>
+            <li><a href="https://store3.psg.fr/es/paris-saint-germain-sergio-ramos/t-92644737+a-09817375+z-84-3945308033"
+                    target="_blank">Sergio Ramos</a></li>
+        </ol>
+    </div>-->
+
+    <div>
+        <h2>Porque usamos cookies</h2>
+        <h3>Esenciales</h3>
+        <p>Las cookies necesarias habilitan la funcionalidad principal del sitio web. Sin estas cookies, el sitio web no puede funcionar correctamente. Ayudan a que un sitio web sea utilizable al habilitar la funcionalidad básica.</p>
+
+        <h3>Marketing</h3>
+        <p>Las cookies de marketing se utilizan para rastrear y recopilar las acciones de los visitantes en el sitio web. Las cookies almacenan datos de usuario e información de comportamiento, lo que permite que los servicios publicitarios se dirijan a más grupos de audiencia. También se puede proporcionar una experiencia de usuario más personalizada de acuerdo con la información recopilada.</p>
+
+        <h3>Google Analytics</h3>
+        <p>Un conjunto de cookies para recopilar información e informar sobre estadísticas de uso del sitio web sin identificar personalmente a los visitantes individuales de Google.</p>
+    </div>
+  
+    <!-- INFORMACION DE TIENDA -->
+    <div id="acercaTienda">
+        <p>La tienda en línea oficial del Paris Saint-Germain enumera todos los artículos oficiales desarrollados
+            para los fanáticos del Club Parisien. Ya sea que esté buscando equipaciones auténticas del Paris
+            Saint-Germain para toda la familia o recuerdos para su colección de fans, aquí encontrará exactamente lo
+            que busca.
+
+            <br>Compre su Camisetas 2021/22 del Paris Saint-Germain , así como equipaciones de tercero, cuarto y
+            portero para hombres, mujeres y niños. El gran jugador Lionel Messi se ha unido oficialmente al PSG, y
+            tenemos todos los estilos de uniformes de Lionel Messi Paris Saint-Germain para elegir. Llevará el
+            número 30 para París, y puedes encontrar las camisetas de Messi Paris aquí en la tienda del PSG. Apoya a
+            tus jugadores favoritos con las camisetas de Neymar Jr y Kylian Mbappé, o personaliza una camiseta con
+            tu propio nombre y número para tu próxima salida al estadio. ¡Entrena como los profesionales con el
+            equipo de entrenamiento Nike, las zapatillas y todo nuestro equipo de fútbol! Mientras esté aquí, no se
+            olvide de recoger algunos accesorios oficiales Paris Saint-Germain para su hogar u oficina, disponible
+            exclusivamente en la tienda online PSG.
+
+            <br>El oficial de Paris Saint-Germain El equipo de servicio al cliente de la tienda en línea está
+            dedicado a brindarle, como fan, la mejor experiencia. Para obtener respuestas a preguntas frecuentes o
+            para obtener servicio al cliente, consulte nuestro menú fácil de usar para realizar compras sin
+            preocupaciones.
+        </p>
+        <img src="https://store3.psg.fr/content/ws/all/963d6613-363e-43e3-8f7a-6f752ae7f5c5__1600X287.png" alt="">
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <div id="footer">
+        <!-- ATENCION AL CLIENTES -->
+        <div id="atencionCliente">
+            <h5>Atención al cliente</h5>
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=51952401130" target="_blank">Atención por Whatsapp</a>
+                </li>
+                <li><a href="https://store3.psg.fr/customer-help-desk" target="_blank">Ayuda</a></li>
+                <li><a href="https://store3.psg.fr/es/tracking-information/ch-1368" target="_blank">Localizador de
+                        envíos</a></li>
+                <li><a href="https://store3.psg.fr/es/sizing-guidelines/ch-1365" target="_blank">Guía de tallas</a>
+                </li>
+                <li><a href="https://google.com.pe" target="_blank">Libro de reclamaciones</a></li>
+            </ul>
+        </div>
+        <!-- REDES SOCIALES DE PAGINA -->
+        <div id="redesSociales">
+            <h5>Nuestras Redes Sociales</h5>
+            <ul>
+                <li><a href="https://www.facebook.com/PSG/" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/PSG_inside" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/psg/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/user/PSGofficiel" target="_blank">Youtube</a></li>
+                <li><a href="https://www.tiktok.com/@psg" target="_blank">TikTok</a></li>
+                <li><a href="https://www.snapchat.com/add/psg" target="_blank">Snapchat</a></li>
+                <li><a href="https://www.twitch.tv/psg?lang=es" target="_blank">Twitch</a></li>
+            </ul>
+        </div>
+        <!-- REGISTRO EN FOOTER -->
+        <div id="footerRegistro">
+            <p>Mantente informado acerca de ofertas, nuevos productos y más</p>
+            <button><a href="pages/registro.html">REGÍSTRATE Y AHORRA UN 10%</a></button>
+        </div>
+    </div>
+    <!-- DERECHOS PAGINA -->
+    <div id="derechos">
+        <p>Copyright © Design by URBANO | 2023</p>
+    </div>
+
+    <!-- Modal PROMOCION-->
+    <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <p>pipipipip</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
