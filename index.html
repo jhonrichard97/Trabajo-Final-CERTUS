@@ -96,7 +96,7 @@
     <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body publicidad">
                     <h3>DESCUENTO DE SEMANA DE CHAMPIONS LEAGUE ⚽</h3>
                     <img src="images/imageDescuento.png" alt="" width="100%">
                     <p>Descuento en todos los productos de la tienda. Promocion valida desde 12/02/2023 hasta 19/02/2023
@@ -110,13 +110,13 @@
     <div class="modal fade" id="carritoCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="tituloCarrito">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                         class="bi bi-cart4" viewBox="0 0 16 16">
                         <path
                             d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
                     </svg>
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras PSG</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mi carrito de compras PSG</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="listaCarrito">
@@ -183,255 +183,217 @@
         <!-- SUBTITULO PRODUCTO -->
         <h2>Nuestro principales productos</h2>
         <!-- TABLA DE PRODUCTOS -->
-        <table id="tablaProducto">
-            <tr>
-                <td>
-                    <div class="producto">
-                        <!-- TITULO PRODUCTO -->
-                        <h3 class="tituloProducto">Camiseta Neymar PSG 2023-24</h3>
-                        <!-- IMAGEN PRODUCTO -->
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-kit-2022-23-little-kids-with-neymar-jr-10-printing_ss4_p-13328499+u-frpvym3dy09j07mqmv4w+v-000979d5a94549a08793ddf14832dda1.jpg?_hv=2&w=900">
-                        <br>
-                        <!-- REDIRECCION A CARRO DE COMPRAS -->
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <!-- PRECIO ANTES PRODUCTO -->
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 150.00</s></h5>
-                        <!-- PRECIO ACTUAL PRODUCTO -->
-                        <h4 class="precioProducto">US$ 106.00</h4>
-                        <!-- DETALLES Y DISPONIBILIDAD ENVIO PRODUCTO -->
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Camiseta de la 4ª equipación del PSG 2023-24</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-vapor-match-shirt-2022-23_ss4_p-13354747+u-kch3skjvkc14lp9ynm8n+v-47ff7de2b492486c9314137625acd7ff.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 199.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 173.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Camiseta previa al partido del PSG - Amarillo</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-pre-match-top-yellow_ss4_p-13354712+u-1c8licyn4jefofakp9i0+v-8fffc3628cd34843b2ff9202e091fad8.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 100.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 83.00</h4>
-                        <ul>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Pantalón corto Strike del PSG - Negro</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-strike-shorts-black_ss4_p-13354640+u-ex2pnxxkwxp1teubf63s+v-a32bb32694e0485380270e46a02052ed.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 80.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 50.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Camiseta Stadium de la 1ª equipación del PSG 2022-23</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-shirt-2022-23_ss4_p-13303204+u-sk3ly93bp2lofzgo6aqu+v-48adda5890534d37b6f42475f8d16147.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 150.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 113.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Funda para iPhone 12 PSG Messi SolidSuit</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-solidsuit-iphone-12-case_ss4_p-12097882+u-lg4sl01oauvdua8gah63+v-001ddc724dbb464885f058c27c0541a6.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 53.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 47.60</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Gorra Core con el escudo del Paris Saint-Germain hombre</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-essential-crest-cap-blue-mens_ss4_p-12033356+u-if8m1uqgisih578cuzz2+v-344992ef151540c9a1b36905bf6d35fc.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 27.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 20.44</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Paris Saint-Germain Marco Verratti Soccerstarz</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-marco-verratti-soccerstarz_ss4_p-12097903+u-4v2jr58cwjdb2cp5ml1f+v-7daf7a4b922e4fe387fc547479281393.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 15.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 9.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Balón de Strike del PSG - en talla 5</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-strike-ball-size-5_ss4_p-13303158+u-z7wxgruqw23fbu3sgdut+v-10be11725a35417f9b1cdea43c290e46.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 51.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 42.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Taza del jugador del PSG - 11oz - Neymar JR</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-player-mug-11oz-neymar-jr_ss4_p-12087770+u-sc20du37c9hw7ogzpbtp+v-73ecaa538280447ebe7e4386b81b342a.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 25.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 15.00</h4>
-                        <ul>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">PSG x Jordan Air 200E - Negro</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-air-200e-black_ss4_p-13354725+u-1app5c5pq7bnhms3volm+v-aaf68612342f49ce9715ccbddeb852e1.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 220.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 195.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Sudadera PSG x Jordan - Gris</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-hoodie-grey_ss4_p-13354671+u-gan7uxfh6a8jazj46uh4+v-b0f7ccf32e074afc96120cf5745e195a.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 120.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 113.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Medias de la 4ª equipación del PSG 2023-24</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-stadium-socks-2022-23_ss4_p-13354711+u-9nsexgvs6gaiwnd0d5c+v-1962eba1da1345129c6527b4fde6a56c.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 35.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 26.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Camiseta de la 1ª equipación del PSG 93/94</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-1993/94-home-shirt_ss4_p-13301593+u-191dhb6klw8xetyl6a7f+v-39f1c3a2948a46818c27637b49703983.jpg?_hv=2&w=900">
-                        <br>
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 90.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 60.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Bufanda PSG Messi - Azul marino - Hombre</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-scarf-navy-mens_ss4_p-12087746+u-ij4s4xv3jyg0kep6qrpl+v-c39c0db4529d4b0daba46582202e8214.jpg?_hv=2&w=900">
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 15.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 8.05</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                        </ul>
-                    </div>
-                </td>
-                <td>
-                    <div class="producto">
-                        <h3 class="tituloProducto">Medias Stadium de la 1ª equipación del PSG 2022-23</h3>
-                        <img class="fotoProducto"
-                            src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-socks-2022-23_ss4_p-13303160+u-h5mut527llblto2cv3yp+v-ae3b569a85644618af88c85caae94455.jpg?_hv=2&w=900">
-                        <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
-                        <h5 class="precioAntesProducto"><s>Antes: US$ 40.00</s></h5>
-                        <h4 class="precioProducto">Ahora: US$ 26.00</h4>
-                        <ul>
-                            <li>Despacho a domicilio</li>
-                            <li>Retiro en tienda</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div id="Catalogo" class="container">
 
+            <div class="row">
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <!-- TITULO PRODUCTO -->
+                    <h3 class="tituloProducto">Camiseta Neymar PSG 2023-24</h3>
+                    <!-- IMAGEN PRODUCTO -->
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-kit-2022-23-little-kids-with-neymar-jr-10-printing_ss4_p-13328499+u-frpvym3dy09j07mqmv4w+v-000979d5a94549a08793ddf14832dda1.jpg?_hv=2&w=900">
+                    <br>
+                    <!-- REDIRECCION A CARRO DE COMPRAS -->
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <!-- PRECIO ANTES PRODUCTO -->
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 150.00</s></h5>
+                    <!-- PRECIO ACTUAL PRODUCTO -->
+                    <h4 class="precioProducto">Ahora: US$ 106.00</h4>
+                    <!-- DETALLES Y DISPONIBILIDAD ENVIO PRODUCTO -->
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Camiseta de la 4ª equipación del PSG 2023-24</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-vapor-match-shirt-2022-23_ss4_p-13354747+u-kch3skjvkc14lp9ynm8n+v-47ff7de2b492486c9314137625acd7ff.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 199.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 173.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Camiseta previa al partido del PSG - Amarillo</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-pre-match-top-yellow_ss4_p-13354712+u-1c8licyn4jefofakp9i0+v-8fffc3628cd34843b2ff9202e091fad8.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 100.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 83.00</h4>
+                    <ul>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Pantalón corto Strike del PSG - Negro</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-strike-shorts-black_ss4_p-13354640+u-ex2pnxxkwxp1teubf63s+v-a32bb32694e0485380270e46a02052ed.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 80.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 50.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Camiseta Stadium de la 1ª equipación del PSG 2022-23</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-shirt-2022-23_ss4_p-13303204+u-sk3ly93bp2lofzgo6aqu+v-48adda5890534d37b6f42475f8d16147.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 150.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 113.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Funda para iPhone 12 PSG Messi SolidSuit</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-solidsuit-iphone-12-case_ss4_p-12097882+u-lg4sl01oauvdua8gah63+v-001ddc724dbb464885f058c27c0541a6.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 53.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 47.60</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Gorra Core con el escudo del Paris Saint-Germain hombre</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-essential-crest-cap-blue-mens_ss4_p-12033356+u-if8m1uqgisih578cuzz2+v-344992ef151540c9a1b36905bf6d35fc.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 27.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 20.44</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Paris Saint-Germain Marco Verratti Soccerstarz</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-marco-verratti-soccerstarz_ss4_p-12097903+u-4v2jr58cwjdb2cp5ml1f+v-7daf7a4b922e4fe387fc547479281393.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 15.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 9.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Balón de Strike del PSG - en talla 5</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-strike-ball-size-5_ss4_p-13303158+u-z7wxgruqw23fbu3sgdut+v-10be11725a35417f9b1cdea43c290e46.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 51.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 42.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Taza del jugador del PSG - 11oz - Neymar JR</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-player-mug-11oz-neymar-jr_ss4_p-12087770+u-sc20du37c9hw7ogzpbtp+v-73ecaa538280447ebe7e4386b81b342a.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 25.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 15.00</h4>
+                    <ul>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">PSG x Jordan Air 200E - Negro</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-air-200e-black_ss4_p-13354725+u-1app5c5pq7bnhms3volm+v-aaf68612342f49ce9715ccbddeb852e1.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 220.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 195.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Sudadera PSG x Jordan - Gris</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-hoodie-grey_ss4_p-13354671+u-gan7uxfh6a8jazj46uh4+v-b0f7ccf32e074afc96120cf5745e195a.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 120.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 113.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Medias de la 4ª equipación del PSG 2023-24</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-x-jordan-fourth-stadium-socks-2022-23_ss4_p-13354711+u-9nsexgvs6gaiwnd0d5c+v-1962eba1da1345129c6527b4fde6a56c.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 35.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 26.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Camiseta de la 1ª equipación del PSG 93/94</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-1993/94-home-shirt_ss4_p-13301593+u-191dhb6klw8xetyl6a7f+v-39f1c3a2948a46818c27637b49703983.jpg?_hv=2&w=900">
+                    <br>
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 90.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 60.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Bufanda PSG Messi - Azul marino - Hombre</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-messi-scarf-navy-mens_ss4_p-12087746+u-ij4s4xv3jyg0kep6qrpl+v-c39c0db4529d4b0daba46582202e8214.jpg?_hv=2&w=900">
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 15.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 8.05</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                    </ul>
+                </div>
+                <div class="producto col-12 col-sm-6 col-md-4 col-lg-3">
+                    <h3 class="tituloProducto">Medias Stadium de la 1ª equipación del PSG 2022-23</h3>
+                    <img class="fotoProducto"
+                        src="https://images.footballfanatics.com/paris-saint-germain/paris-saint-germain-home-stadium-socks-2022-23_ss4_p-13303160+u-h5mut527llblto2cv3yp+v-ae3b569a85644618af88c85caae94455.jpg?_hv=2&w=900">
+                    <a class="agregarCarro" onclick="addCart(this)">Agregar al Carro</a>
+                    <h5 class="precioAntesProducto"><s>Antes: US$ 40.00</s></h5>
+                    <h4 class="precioProducto">Ahora: US$ 26.00</h4>
+                    <ul>
+                        <li>Despacho a domicilio</li>
+                        <li>Retiro en tienda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- INFORMACION DE TIENDA -->
