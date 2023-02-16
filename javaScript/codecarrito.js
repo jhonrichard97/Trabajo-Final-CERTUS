@@ -50,10 +50,10 @@ function actualizarLista() {
   //BUCLE PARA RECORRER LOS PRODUCTOS COOKIE SEGUN EL CONTADOR
   for(var i=1;i<posicionCookie;i++){
     obtenerCookie("cookieProducto"+i);
-    texto = texto + "<div class='productoLista'>";
-    texto = texto + "<h4>" + nombreProducto + "</h4>";
-    texto = texto + "<p>" + precioAntesProducto + "</p>";
-    texto = texto + "<p>" + precioAhoraProducto + "</p>";
+    texto = texto + "<div class='productoListaCarrito'>";
+    texto = texto + "<h5 class='tituloProducto'>" + nombreProducto + "</h5>";
+    texto = texto + "<p class='precioAntes'>" + precioAntesProducto + "</p>";
+    texto = texto + "<p class='precioAhora'>" + precioAhoraProducto + "</p>";
     texto = texto + "</div>";
   }
   lista.innerHTML = texto;

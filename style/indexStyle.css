@@ -172,6 +172,10 @@
     border-radius: 6    px;
 }
 
+.agregarCarro:hover{
+    cursor: pointer;
+}
+
 .precioAntesProducto{
     font-size: 15px;
     color: #000000;
