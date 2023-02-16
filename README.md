@@ -1,4 +1,4 @@
 # Trabajo-parcial-CERTUS
-Trabajo parcial 1 CERTUS
+Trabajo Final CERTUS
 
 Alumno: Jhon Richard Urbano Amiquero
